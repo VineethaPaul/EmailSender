@@ -68,7 +68,7 @@ def SendEmail(request):
         # try:
         # crontab(minute='*/10',hour='3,17,22', day_of_week='thu,fri')
         schedule, created = CrontabSchedule.objects.get_or_create(hour=sT[0],minute=sT[1],day_of_week=scheduledDays)
-        task = PeriodicTask.objects.create(crontab=schedule,name='schedule_email'+'36',task='emails.tasks.send_email_task',
+        task = PeriodicTask.objects.create(crontab=schedule,name='schedule_email'+'44',task='emails.tasks.send_email_task',
                                            args=json.dumps([emailSubject,messageBody,toAddress,file_data]))
         returnMessage = messages.success(request,'Mail sent successfully') 
         return render(request,'Emails/sendEmail.html',{'message':'Mail sent successfully'})

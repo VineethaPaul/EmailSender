@@ -9,8 +9,7 @@ def sendEmailFunc(emailSubject,messageBody,toAddress,attachedFiles):
                 toAddress,
             )
 
-    for f in attachedFiles:
-        sendMail.attach(f.name, f.read(), f.content_type)
+    
     print(sendMail,'sendMailsendMail')
     sendMail.send()
     return 'Mail Sent Successfully'
