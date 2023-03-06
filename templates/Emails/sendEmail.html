@@ -30,16 +30,23 @@
                 </div>
                 <div class="form-group p-1 mb-1">
                     <h6>Attach File <sup class="text-danger">*</sup></h6>
-                    <input type="file" class="form-control form-control-sm" name="attachedFiles" id="attachedFiles" multiple>
+                    <input type="file" class="form-control form-control-sm" name="attachedFiles" id="attachedFiles" >
                 </div>
                 <div class="form-group row p-1 mb-1">
                     <div class="col-md col-sm-12">
-                        <h6>For Every <sup class="text-danger">*</sup></h6>
+                        <h6>Every <sup class="text-danger">*</sup></h6>
                         <select class="form-control form-control-sm" name="scheduledDays" id="scheduledDays" required>
                             <option value="">Choose</option>
-                            <option value="15">15 Days</option>
+                            {% comment %} <option value="15">15 Days</option>
                             <option value="30">30 Days</option>
-                            <option value="45">45 Days</option>
+                            <option value="45">45 Days</option> {% endcomment %}
+                            <option value="sunday">Sunday</option>
+                            <option value="monday">Monday</option>
+                            <option value="tuesday">Tuesday</option>
+                            <option value="wednesday">Wednesday</option>
+                            <option value="thursday">Thursday</option>
+                            <option value="friday">Friday</option>
+                            <option value="saturday">Saturday</option>
                         </select>
                     </div>
                     <div class="col-md col-sm-12">
